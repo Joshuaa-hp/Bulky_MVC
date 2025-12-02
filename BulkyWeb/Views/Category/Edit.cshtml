@@ -4,7 +4,7 @@
 <form method="post">
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary p-0">Create Category</h2>
+            <h2 class="text-primary p-0">Update Category</h2>
         </div>
         <div asp-validation-summary="All"></div>
         <div class="mb-3 row">
@@ -20,7 +20,7 @@
 
         <div class="row">
             <div class="col-6">
-                <button type="submit" class="btn btn-outline-dark form-control">Create</button>
+                <button type="submit" class="btn btn-outline-dark form-control">Update</button>
             </div>
             <div class="col-6">
                 <a asp-controller="Category" asp-action="Index" class="btn btn-secondary form-control">Cancel</a>
@@ -29,8 +29,8 @@
     </div>
 </form>
 
-@section Scripts{
+@section Scripts {
     @{
-        <partial name="_ValidationScriptsPartial"/>
+        <partial name="_ValidationScriptsPartial" />
     }
 }
