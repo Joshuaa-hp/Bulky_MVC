@@ -27,6 +27,13 @@ namespace BulkyWeb.Controllers
         [HttpPost]
         public IActionResult Create(Category newCategory)
         {
+            //TODO: Probably want better custom validation (i.e. does category already exist)
+            //Adding random custom validation
+            if(newCategory.Name == newCategory.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("name", "DisplayOrder cannot match Name");
+            }
+
             if(ModelState.IsValid)
             {
                 _db.Categories.Add(newCategory);
